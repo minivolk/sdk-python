@@ -15,17 +15,6 @@ jobs:
         include:
           - os: ubuntu-latest
             package-suffix: linux-amd64
-          - os: ubuntu-arm
-            package-suffix: linux-aarch64
-            runsOn: ubuntu-24.04-arm64-2-core
-          - os: macos-intel
-            package-suffix: macos-amd64
-            runsOn: macos-13
-          - os: macos-arm
-            package-suffix: macos-aarch64
-            runsOn: macos-14
-          - os: windows-latest
-            package-suffix: windows-amd64
     runs-on: ${{ matrix.runsOn || matrix.os }}
     steps:
       - uses: actions/checkout@v4
